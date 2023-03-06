@@ -1,0 +1,51 @@
+*{
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background: #282828;
+    color: white;
+    font-family: arial;
+}
+
+.inputBox{
+    width: 300px;
+    position: relative;
+    margin: 1rem;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1111;
+    outline: none;
+    background: none;
+    padding-top: 20px;
+    font-weight: 900;
+  
+}
+.inputBox span{
+    position: absolute;
+    left: 0px;
+    margin-bottom: 0.2rem;
+    transition: all 0.5s linear;
+}
+
+.inputBox input:valid ~ span{
+    color: hotpink;
+}
+.inputBox input:focus ~ span{
+    color:#dd22;
+    transform: translateX(10px) translateY(-10px);
+    font-size: 14px;
+    padding: 2.65px;
+    letter-spacing: 0.2rem;
+}
